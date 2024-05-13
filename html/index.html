@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Steps</title>
+    <link rel = "stylesheet" href="statics\css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Logo de Stylish Steps-->
+    <header>
+        <div class="logo">
+            <a href="Imagenes\logo">
+            <img src="" alt="Logo comercial  de Stylish Steps">
+            </a>
+            <div id="title">
+                <h1>Stylish Steps</h1>
+                <h3>Level Up</h3>
+                </div>
+        </div>
+    </header>
+
+    <!-- Barra de navegación-->
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./registro.html">Regístrate</a></li>
+                    <li><a href="login.html">Ingresa a tu cuenta</a></li>
+                    <li><a href="./aboutUs.html">Sobre nosotros</a></li>
+                </ul>
+                <a href="#footer" class="btn"><button>Sigue nuestros pasos</button></a>
+                
+            </nav>
+    <!--Carrusel-->
+            <div class="carousel">
+                    <img class="carousel-image" src="/Imagenes/1.png" alt="Imagen del HOT SALE de esta semana. 50% de descuento con modo">
+                    <img class="carousel-image" src="/Imagenes/2.png" alt="Imagen de persona corriento. Sube de nivel,desafía tus límites">
+                    <img class="carousel-image" src="/Imagenes/3.png" alt="Imagen vive tus experiencias con estilo">
+                    <img class="carousel-image" src="/Imagenes/4.png" alt="Imagen Marca la diferencia">
+                </div>
+            </div>
+            <script>
+                let carouselImages = document.querySelectorAll('.carousel-image');
+                let currentImageIndex = 0;
+        
+                setInterval(() => {
+                    carouselImages[currentImageIndex].style.opacity = '0';
+                    currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                    carouselImages[currentImageIndex].style.opacity = '1';
+                }, 5000);
+            </script>
+        </div>
+    </header>
+    <!--Footer-->
+    <footer id="footer">
+        <a name="footer">Nuestras redes</a><br>
+        <a class="social"><i class="fa fa-facebook"></i>Stylish Steps</a>
+        <a class="social"><i class="fa fa-twitter"></i>Stylish Steps</a>
+        <a class="social"><i class="fa fa-instagram"></i>Stylish Steps amantes de la moda </a>
+        <a class="social"><i class="fa fa-youtube"></i>Stylish Steps expertos en calzado </a>
+    </footer>
+    
+</body>
+</html>
