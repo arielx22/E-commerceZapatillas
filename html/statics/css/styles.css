@@ -6,6 +6,7 @@
     --marron: #664731;
     --rojo:#f01515;
     --negro:#000000;
+    --rosa:#faa8a8;
 }
 *{
     box-sizing: border-box;
@@ -79,17 +80,74 @@ nav ul li a{
 .carousel-image {
     justify-content: center;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     object-fit: cover;
     transition: opacity 1s ease-in-out;
+    padding: 10px 20px;
 }
 .carousel-image:not(:first-child){
     opacity: 0;
 }
 .carousel{
     background-color: var(--amarillo);
+}
+/*Secciones*/
+.article{
+    margin:0 auto;
+    width: 100%;
+    background-color: #FEDD62;
+    text-align: center;
+}
+.p{
+    text-align:center;
+}
+.seccionMujer{
+    background-color: #faa8a8;
+    margin-bottom:auto;
+    padding: 3em;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.seccionHombre{
+    background-color: #1f0793;
+    margin-bottom:auto;
+    padding: 3em;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.seccionNiños{
+    background-color: #99f1ab;
+    margin-bottom:auto;
+    padding: 3em;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.card {
+    width: 270px;
+    height: 323px;
+    background-color: #dbc5bd;
+    border-radius: 16px;
+    border-style: groove;
+    display: flex;
+    flex-direction:column; 
+    margin: 1px;
+}
+.imgcard {
+    height: 200px;
+    width: 237px;
+    flex: 1 1 auto;
+    margin: 1em;
+    overflow: hidden;
+    border-radius: 16px;
 }
 /*footer*/
 footer{
