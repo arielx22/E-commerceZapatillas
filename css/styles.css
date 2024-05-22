@@ -20,12 +20,38 @@
 h1 {
     color: var(--negro);
     padding-left: 20px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+h2 {
+    color: var(--negro);
+    padding-left: 20px;
     font-size: 30px;
 }
 h3 {
     color: var(--negro);
     padding: 5px 10%;
     font-size: 25px;
+}
+body {
+    background-color:var(--amarillo);
+    font-family: 'Nunito', sans-serif;
+    color: var(--negro); 
+}
+/*sobre nosotros*/
+.container {
+    max-width: 800px;
+    margin: 70px 200px;
+    padding: 20px;
+    background-color: var(--naranja);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+}
+#tienda {
+    width: 60%;
+    margin:70px 225px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
 }
 /*logo*/
 .logo {
@@ -95,47 +121,47 @@ nav ul li a{
 }
 /*Secciones*/
 .article{
-    margin:0 auto;
+    margin:0px;
     width: 100%;
     background-color: var(--amarillo);
     text-align: center;
 }
 .p{
     text-align:center;
+    line-height: 1.5;
 }
 .seccionMujer{
     background-color: var(--rosa);
-    margin-bottom:auto;
     padding: 3em;
     display: flex;
     text-align:center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
-    margin: 6px;
-
+    margin: 20px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
 }
 .seccionHombre{
     background-color:var(--azul);
-    margin-bottom:auto;
     padding: 3em;
     display: flex;
     text-align:center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
-    margin: 6px;
+    margin: 20px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
 }
 .seccionNiños{
     background-color: var(--verde);
-    margin-bottom:auto;
+    margin: 20px 5px;
     padding: 3em;
     display: flex;
     text-align:center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
-    margin: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
 }
 .card {
     width: 270px;
@@ -154,9 +180,6 @@ nav ul li a{
     margin: 1em;
     overflow: hidden;
     border-radius: 16px;
-}
-.banner{
-    padding: 200px;
 }
 /*formularos*/
 .formularios{
