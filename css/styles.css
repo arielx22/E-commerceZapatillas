@@ -155,27 +155,35 @@ nav ul li a{
     overflow: hidden;
     border-radius: 16px;
 }
+.banner{
+    padding: 200px;
+}
+/*formularos*/
+.formularios{
+    display:grid;
+    background-color: var(--amarillo);
+}
 /*Login*/
 #login{
-    background-color: var(--amarillo);
+    background-color:#f8f9fa;
+    padding: 80px 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 30px 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
 }
 /*Registro*/
 #registro{
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 30px 300px;
     background-color: #f8f9fa; 
-    padding: 50px;
-    align-items: center;
+    padding: 80px 200px;
+    text-align:center;
+    flex-direction: column;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
-    margin-top: 20px;
+
 }
 
 /*footer*/
