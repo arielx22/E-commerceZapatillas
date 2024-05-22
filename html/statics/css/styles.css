@@ -6,7 +6,9 @@
     --marron: #664731;
     --rojo:#f01515;
     --negro:#000000;
-    --rosa:#faa8a8;
+    --rosa:#dc8998;
+    --azul:#3533cd;
+    --verde: #7ed957;
 }
 *{
     box-sizing: border-box;
@@ -95,14 +97,14 @@ nav ul li a{
 .article{
     margin:0 auto;
     width: 100%;
-    background-color: #FEDD62;
+    background-color: var(--amarillo);
     text-align: center;
 }
 .p{
     text-align:center;
 }
 .seccionMujer{
-    background-color: #faa8a8;
+    background-color: var(--rosa);
     margin-bottom:auto;
     padding: 3em;
     display: flex;
@@ -110,9 +112,11 @@ nav ul li a{
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
+    margin: 6px;
+
 }
 .seccionHombre{
-    background-color: #1f0793;
+    background-color:var(--azul);
     margin-bottom:auto;
     padding: 3em;
     display: flex;
@@ -120,9 +124,10 @@ nav ul li a{
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
+    margin: 6px;
 }
 .seccionNiños{
-    background-color: #99f1ab;
+    background-color: var(--verde);
     margin-bottom:auto;
     padding: 3em;
     display: flex;
@@ -130,6 +135,7 @@ nav ul li a{
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
+    margin: 6px;
 }
 .card {
     width: 270px;
