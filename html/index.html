@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Steps</title>
+    <link rel = "stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/png" href="../static/img/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Logo de Stylish Steps-->
+    <header>
+        <div class="logo">
+
+            <a href="../html/index.html">
+                <img src="../static/img/logo2.png" alt="Logo comercial  de Stylish Steps">
+            </a>
+            <div id="title">
+                <h1>Stylish Steps</h1>
+                <h3>Level Up</h3>
+            </div>
+            
+        </div>
+
+        <!-- Barra de navegación-->
+        <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./registro.html">Regístrate</a></li>
+                    <li><a href="./aboutUs.html">Sobre nosotros</a></li>
+                </ul>
+                <a href="#footer" class="btn"><button>Sigue nuestros pasos</button></a>
+                
+        </nav>
+        <!--Carrusel-->
+        <div class="carousel">
+                <img class="carousel-image" src="../static/img/home/carrusel/1.png" alt="Imagen del HOT SALE de esta semana. 50% de descuento con modo">
+                <img class="carousel-image" src="../static/img/home/carrusel/2.png" alt="Imagen de persona corriento. Sube de nivel,desafía tus límites">
+                <img class="carousel-image" src="../static/img/home/carrusel/3.png" alt="Imagen vive tus experiencias con estilo">
+                <img class="carousel-image" src="../static/img/home/carrusel/4.png" alt="Imagen Marca la diferencia">
+        </div>     
+        <script>
+                let carouselImages = document.querySelectorAll('.carousel-image');
+                let currentImageIndex = 0;
+        
+                setInterval(() => {
+                    carouselImages[currentImageIndex].style.opacity = '0';
+                    currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                    carouselImages[currentImageIndex].style.opacity = '1';
+                }, 5000);
+        </script>
+    </header>
+    <article class="article">
+        <h2>Exprésate a tu manera</h2>
+        <!-- Sección para Mujer -->
+        <section class="seccionMujer">
+            <div a href="./seccionMujer">
+                    <h3>Elegancia en cada paso</h3>
+                    <p>Descubre nuestra colección de zapatillas para mujer. Diseñadas para brindarte comodidad y estilo, nuestras zapatillas te acompañarán en cada paso de tu día.</p><br>
+            </div>
+            <div class="card">Deportivo:<br><b>"Corre con estilo"</b><br>
+                <img src="../static/img/home/deportivaMujer.jpg" alt="Imagen de zapatillas deportivas femeninas" class="imgcard">
+            </div>
+            <div class="card">Urbano:<br><b>"Conquista la ciudad"</b><br>
+                <img src="../static/img/home/urbanaMujer.jpg" alt="Imagen de zapatillas urbanas femeninas"class="imgcard">
+            </div>
+            <div class="card">Casual:<br><b>"Comodidad sin sacrificar el estilo"</b><br>
+                <img src="../static/img/home/informalMujer.jpeg" alt="Imagen de zapatillas informales femeninas"class="imgcard">
+            </div>
+        </section>
+        
+        <!-- Sección para Hombre -->
+        <section class="seccionHombre">
+            <div>
+                <h3>Pisa fuerte, vive con estilo</h3>
+                <p>Explora nuestra variedad de zapatillas para hombre. Ya sea para el gimnasio, la oficina o un fin de semana relajado, tenemos el par perfecto para ti.</p>
+            </div>
+            <div class="card">Deportivo:<br><b>"Rendimiento y estilo"</b><br>
+                <img src="../static/img/home/deportivahombre.jpg" alt="Imagen de zapatillas deportivas masculinas" class="imgcard">
+            </div>
+            <div class="card">Urbano:<br><b>"Domina el asfalto"</b><br>
+                <img src="../static/img/home/urbanahombre.jpg" alt="Imagen de zapatillas urbanas masculinas" class="imgcard">
+            </div>
+            <div class="card">Casual:<br><b>"Relájate con estilo"</b><br>
+                <img src="../static/img/home/informalhombre.jpg" alt="Imagen de zapatillas informales masculinas" class="imgcard">
+            </div>
+        </section>
+        
+            <!-- Sección para Niños -->
+        <section class="seccionNiños">
+            <div>
+                <h3>Diversión en cada salto</h3>
+                <p>Descubre nuestras zapatillas para niños. Coloridas, cómodas y duraderas, nuestras zapatillas son perfectas para todas sus aventuras.</p>
+            </div>
+            <div class="card">Deportivo:<br><b>"Para pequeños campeones"</b><br>
+                <img src="../static/img/home/deportivanino.jpg" alt="Imagen de zapatillas deportivas para niños" class="imgcard">
+            </div>
+            <div class="card">Urbano:<br><b>"Perfecto para el cole"</b><br>
+                <img src="../static/img/home/paraelcole.jpg" alt="Imagen e zapatillas urbanas para niños" class="imgcard">
+            </div>
+            <div class="card">Casual:<br><b>"Comodidad para jugar todo el día"</b><br>
+                <img src="../static/img/home/informalnino.jpg" alt="Imagen de zapatillas informales para niños" class="imgcard">
+            </div>
+        </section>
+    </article>
+
+    <!--Footer-->
+    <footer id="footer">
+        <a name="footer">Nuestras redes</a><br>
+        <a class="social"><i class="fa fa-facebook"></i>Stylish Steps</a>
+        <a class="social"><i class="fa fa-twitter"></i>Stylish Steps</a>
+        <a class="social"><i class="fa fa-instagram"></i>Stylish Steps amantes de la moda </a>
+        <a class="social"><i class="fa fa-youtube"></i>Stylish Steps expertos en calzado </a>  
+    </footer>  
+</body>
+</html>
