@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
 :root {
     --amarillo: #FEDD62;
     --naranja: #F48B48;
     --marron: #664731;
-    --rojo:#f01515;
-    --negro:#000000;
-    --rosa:#dc8998;
-    --azul:#3533cd;
+    --rojo: #f01515;
+    --negro: #000000;
+    --rosa: #dc8998;
+    --azul: #3533cd;
     --verde: #7ed957;
-    --blanco:#ffffff;
+    --blanco: #ffffff;
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Nunito', sans-serif;
@@ -23,20 +25,23 @@ h1 {
     font-size: 35px;
     margin-bottom: 20px;
 }
+
 h2 {
     color: var(--negro);
     padding-left: 20px;
     font-size: 30px;
 }
+
 h3 {
     color: var(--negro);
     padding: 5px 10%;
     font-size: 25px;
 }
+
 body {
-    background-color:var(--amarillo);
+    background-color: var(--amarillo);
     font-family: 'Nunito', sans-serif;
-    color: var(--negro); 
+    color: var(--negro);
 }
 
 /*  header {
@@ -54,18 +59,24 @@ body {
 /*sobre nosotros*/
 .container {
     max-width: 800px;
-    margin: 70px 200px;
-    padding: 20px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
     background-color: var(--naranja);
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+    text-align: center;
 }
+
 #tienda {
+    display: flex;
     width: 60%;
-    margin:70px 225px;
+    margin: 3rem auto 3rem;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.293);
 }
+
 /*logo*/
 /*.logo {
     display: flex;
@@ -76,25 +87,28 @@ body {
     background-color: #FEDD62;
 }*/
 .logo {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-	gap: 0.5rem;
+    gap: 0.5rem;
     margin-left: 1rem;
     margin-top: 4px;
 }
 
 .logo_About {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-	gap: 0.5rem;
+    gap: 0.5rem;
 }
 
 .logo img {
-    max-height: 100px; /* Ajusta esta altura según necesites */
-    height: 100%; /* Asegura que la imagen ocupe el 100% del alto del enlace */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
+    max-height: 100px;
+    /* Ajusta esta altura según necesites */
+    height: 100%;
+    /* Asegura que la imagen ocupe el 100% del alto del enlace */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
 }
 
 .stylishstepsImages {
@@ -162,22 +176,26 @@ nav {
     height: 60px;
     padding: 5px 10%;
 }
-nav ul{
+
+nav ul {
     padding: 0;
     list-style: none;
     display: flex;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
-nav ul li a{
+
+nav ul li a {
     font-weight: 700;
     font-size: 20px;
     color: var(--marron);
     text-decoration: none;
 }
-.btn button{
+
+.btn button {
     font-weight: 700;
     color: var(--marron);
     padding: 5px 25px;
@@ -196,6 +214,7 @@ nav ul li a{
     overflow: hidden;
     display: block;
 }
+
 .carousel-image {
     justify-content: center;
     position: absolute;
@@ -204,56 +223,64 @@ nav ul li a{
     transition: opacity 1s ease-in-out;
     padding: 10px 20px;
 }
-.carousel-image:not(:first-child){
+
+.carousel-image:not(:first-child) {
     opacity: 0;
 }
-.carousel{
+
+.carousel {
     background-color: var(--amarillo);
 }
+
 /*Secciones*/
-.article{
-    margin:0px;
+.article {
+    margin: 0px;
     width: 100%;
     background-color: var(--amarillo);
     text-align: center;
 }
-.p{
-    text-align:center;
+
+.p {
+    text-align: center;
     line-height: 1.5;
 }
-.seccionMujer{
+
+.seccionMujer {
     background-color: var(--rosa);
     padding: 3em;
     display: flex;
-    text-align:center;
+    text-align: center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
     margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
-.seccionHombre{
-    background-color:var(--azul);
+
+.seccionHombre {
+    background-color: var(--azul);
     padding: 3em;
     display: flex;
-    text-align:center;
+    text-align: center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
     margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
-.seccionNiños{
+
+.seccionNiños {
     background-color: var(--verde);
     margin: 20px 5px;
     padding: 3em;
     display: flex;
-    text-align:center;
+    text-align: center;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
+
 .card {
     width: 270px;
     height: 323px;
@@ -261,9 +288,10 @@ nav ul li a{
     border-radius: 16px;
     border-style: groove;
     display: flex;
-    flex-direction:column; 
+    flex-direction: column;
     margin: 1px;
 }
+
 .imgcard {
     height: 200px;
     width: 237px;
@@ -272,28 +300,31 @@ nav ul li a{
     overflow: hidden;
     border-radius: 16px;
 }
+
 /*formularos*/
-.formularios{
-    display:grid;
+.formularios {
+    display: grid;
     background-color: var(--amarillo);
 }
+
 /*Login*/
-#login{
-    background-color:#f8f9fa;
+#login {
+    background-color: #f8f9fa;
     padding: 80px 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     margin: 30px 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0,0.293);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
+
 /*Registro*/
-#registro{
+#registro {
     margin: 30px 300px;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
     padding: 80px 200px;
-    text-align:center;
+    text-align: center;
     flex-direction: column;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
@@ -301,7 +332,7 @@ nav ul li a{
 }
 
 /*footer*/
-footer{
+footer {
     display: -moz-inline-box;
     text-align: center;
     background-color: var(--naranja);
@@ -310,7 +341,8 @@ footer{
     height: 150px;
     padding: 5px 10%;
 }
-footer a{
+
+footer a {
     align-items: center;
     padding: 0;
     margin-left: 2%;
@@ -321,45 +353,53 @@ footer a{
     color: white;
     text-decoration: none;
     font-weight: 100;
-    
+
 }
+
 .fa {
-    
+
     padding: 2px;
     font-size: 30px;
     width: 50px;
     text-decoration: none;
 }
 
-.textoValidacion{
+.textoValidacion {
     margin-top: 10px;
     color: var(--naranja);
 
 }
+
 @media only screen and (max-width: 992px) {
     h1 {
         font-size: 25px;
     }
-    footer a{
+
+    footer a {
         font-size: 15px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-weight: 800;
         font-size: 18px;
     }
 }
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 20px;
     }
-    footer a{
+
+    footer a {
         font-size: 10px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-weight: 700;
         font-size: 15px;
     }
-    .btn button{
+
+    .btn button {
         font-weight: 700;
         padding: 5px 25px;
         font-size: 12px;
@@ -379,7 +419,7 @@ footer a{
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
 }
@@ -433,7 +473,7 @@ footer a{
     align-items: center;
     justify-content: center;
     /* flex: 2; */
-    
+
 }
 
 .slides {
@@ -459,7 +499,8 @@ footer a{
     font-size: calc(var(--base-font-size) + 1vw);
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -480,7 +521,8 @@ footer a{
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: transparent;
-    color:#000000;
+    color: #000000;
 }
