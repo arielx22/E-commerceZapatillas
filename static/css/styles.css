@@ -97,6 +97,14 @@ body {
     object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
 }
 
+.stylishstepsImages {
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    object-fit: cover;
+    /* padding: 10px 20px; */
+}
+
 .cart-icon {
     position: absolute;
     right: 1rem;
@@ -358,6 +366,61 @@ footer a{
     }
 }
 
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.producto .descripcion {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 1rem;
+}
+
+.producto .precio {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin: 0.5rem 0;
+}
+
+.producto .comprar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto .comprar:hover {
+    background-color: #2980b9;
+}
+
 .slider {
     position: relative;
     width: 40%;
@@ -368,7 +431,7 @@ footer a{
     background-color: var(--naranja);
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     /* flex: 2; */
     
 }
@@ -391,8 +454,9 @@ footer a{
 
 .slide p {
     margin: 0;
-    font-size: 24px;
+    /* font-size: 24px; */
     color: #333;
+    font-size: calc(var(--base-font-size) + 1vw);
 }
 
 .prev, .next {
