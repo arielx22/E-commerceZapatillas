@@ -4,63 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel = "stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/png" href="../static/img/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<nav>
+    <ul>
+        <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./seccionHombre.html">Hombre</a></li>
+                <li><a href="./seccionMujer.html">Mujer</a></li>
+                <li><a href="./seccionNino.html">Niño</a></li>
+                <li><a href="./aboutUs.html">Sobre nosotros</a></li>
+    </ul>
+    <a href="#footer" class="btn"><button>Sigue nuestros pasos</button></a>
+    <a href="#cart" class="cart-icon"><i class="fas fa-shopping-bag"></i></a>
+    
+</nav>
 <!-- Logo de Stylish Steps-->
 <header>
-    <img src="/Imagenes/BannerLogin.png" width="100%">
+    <img src="../static/img/BannerLogin.png" width="100%" alt="LoginBanner">
 </header>
 <body class="formularios">
     <section id="login">
-    <h1>Ingresa a tu cuenta</h1>
-    <!-- Formulario de login -->
-    <form onsubmit="redirectHome()"></form>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="email@email.com">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
-        <label for="remember"><input type="checkbox" id="remember" name="remember">Remember me</label>
-        <a href="/html/index.html" class="btn"></a><button type="submit" name="submit">Ingresar</button>
-    <!-- Enlace para ir a la sección de registro -->
-    <p style="text-align: center;">¿Aún no tienes una cuenta con nosotros? <a href="#registro"><br>Regístrate acá</a></p>
-    <script>
-        function redirectHome() {
-        window.location.href = "index.html";
-        }
-    </script>
-    </section>
-    <section id="registro">
-        <h1>Regístrate</h1>
-        <!-- Formulario de registro -->
-        <form action="" method="post">
-            <label for="firstName">Nombre:</label>
-            <input type="text" id="firstName" name="firstName" required>
-            <label for="lastName">Apellido:</label>
-            <input type="text" id="lastName" name="lastName" required>
-            <label for="mobileNumber">Número de celular:</label>
-            <input type="tel" id="mobileNumber" name="mobileNumber">
+        <h1>Ingresá a tu cuenta</h1>
+        <!-- Formulario de login -->
+        <form onsubmit="redirectHome()"></form>
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="dateOfBirth">Fecha de nacimiento:</label>
-            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            <input type="email" id="email" name="email" placeholder="email@email.com" required>
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
-            <label for="confirmPassword">Confirmar contraseña:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <button type="submit">Registrarme</button>
-<!-- Enlace para volver a la página de inicio de sesión -->
-    <p>¡Ya tienes tu cuenta!<a href="#login"><br>Ingresa acá</a></p>     
+            <label for="remember"><input type="checkbox" id="remember" name="remember">Recordarme en este dispositivo</label>
+            <a href="../html/index.html" class="btn"></a><button type="submit" name="submit">Ingresar</button>
+        <!-- Enlace para ir a la sección de registro -->
+        <p style="text-align: center;">¿Aún no tenés una cuenta con nosotros? <a href="#registro"><br>Regístrate acá</a></p>
         </form>
+        <script>
+            function redirectHome() {
+    window.location.href = "html\index.html"; 
+    return false;
+}
+        </script>
     </section>
-    
-</body>
+    <section id="registro">
+        <h1>¡Regístrate!</h1>
+        <!-- Formulario de registro -->
+        <form action="" method="post">
+            <label for="firstName">Nombre:</label><br>
+            <input type="text" id="firstName" name="firstName" required><br>
+            <label for="lastName">Apellido:</label><br>
+            <input type="text" id="lastName" name="lastName" required><br>
+            <label for="mobileNumber">Número de celular:</label><br>
+            <input type="tel" id="mobileNumber" name="mobileNumber"required><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="dateOfBirth">Fecha de nacimiento:</label><br>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="confirmPassword">Confirmar contraseña:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            <button type="submit">Registrarme</button><br><br>
+            <!-- Enlace para volver a la página de inicio de sesión -->
+            <p>¿Ya tenés tu cuenta?<a href="#login"><br>Ingresá acá</a></p><br>
+            <label for="imagen">Si querés compartir con nosotros una foto con tus zapatillas favoritas de Stylish Steps, súbela acá y la compartiremos en nuestras redes.</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*">     
+        </form>
+        <!--Validación de contraseña-->
+        <script>
+            const formRegistro = document.querySelector('#registro form');
+            formRegistro.addEventListener('submit', validarRegistro);
+        
+            function validarRegistro(event) {
+                event.preventDefault();
+        
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+        
+                if (password !== confirmPassword) {
+                    alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+                    return;
+                }
+            }
+        </script>
+        
+    </section>
     <!--Footer-->
     <footer id="footer">
         <a name="footer">Nuestras redes</a><br>
-        <a class="social"><i class="fa fa-facebook"></i>Stylish Steps</a>
-        <a class="social"><i class="fa fa-twitter"></i>Stylish Steps</a>
-        <a class="social"><i class="fa fa-instagram"></i>Stylish Steps amantes de la moda </a>
-        <a class="social"><i class="fa fa-youtube"></i>Stylish Steps expertos en calzado </a>
+        <a class="social"><i class="fab fa-facebook"></i>Stylish Steps</a>
+        <a class="social"><i class="fab fa-twitter"></i>Stylish Steps</a>
+        <a class="social"><i class="fab fa-instagram"></i>Stylish Steps amantes de la moda </a>
+        <a class="social"><i class="fab fa-youtube"></i>Stylish Steps expertos en calzado </a>
     </footer>
+</body>
 </html>
