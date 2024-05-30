@@ -333,11 +333,11 @@ nav ul li a {
 
 /*footer*/
 footer {
-    display: -moz-inline-box;
+    display: flex;
     text-align: center;
     background-color: var(--naranja);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 150px;
     padding: 5px 10%;
 }
@@ -345,18 +345,18 @@ footer {
 footer a {
     align-items: center;
     padding: 0;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     list-style: none;
     display: flex;
-    font-size: 700;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     font-weight: 100;
 
 }
 
-.fa {
+.fab {
 
     padding: 2px;
     font-size: 30px;
