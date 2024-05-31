@@ -38,6 +38,24 @@ h3 {
     font-size: 25px;
 }
 
+.animacion {
+    text-align: center; 
+    animation: fadeInLeftBig 5s infinite;
+    font-size: 10vh; 
+}
+@keyframes fadeInLeftBig {
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    font-size: 5vh; 
+    color: var(--marron);
+}
+}
+
 body {
     background-color: var(--amarillo);
     font-family: 'Nunito', sans-serif;
@@ -116,7 +134,6 @@ body {
     position: relative;
     width: 100vw;
     object-fit: cover;
-    /* padding: 10px 20px; */
 }
 
 .cart-icon {
@@ -177,6 +194,7 @@ nav {
     padding: 5px 10%;
 }
 
+<<<<<<< Updated upstream
 nav ul {
     padding: 0;
     list-style: none;
@@ -193,6 +211,46 @@ nav ul li a {
     font-size: 20px;
     color: var(--marron);
     text-decoration: none;
+=======
+.navigation {
+    list-style: circle;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+
+.navigation a:hover,
+.navigation a:active {
+    color: tomato;
+    background-color: black;
+}
+
+.navigation .btn button:hover {
+    background-color: #c40606;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+>>>>>>> Stashed changes
 }
 
 .btn button {
@@ -333,21 +391,28 @@ nav ul li a {
 
 /*footer*/
 footer {
+<<<<<<< Updated upstream
     display: flex;
     text-align: center;
+=======
+>>>>>>> Stashed changes
     background-color: var(--naranja);
-    display: flex;
-    justify-content: space-around;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
     height: 150px;
+<<<<<<< Updated upstream
     padding: 5px 10%;
+=======
+    padding: auto;
+    width: 100%;
+>>>>>>> Stashed changes
 }
 
 footer a {
     align-items: center;
     padding: 0;
-    margin-left: 4%;
-    margin-right: 4%;
-    list-style: none;
+    margin: auto;
     display: flex;
     font-size: 1rem;
     color: white;
@@ -399,10 +464,44 @@ footer a {
         font-size: 15px;
     }
 
+
     .btn button {
         font-weight: 700;
         padding: 5px 25px;
         font-size: 12px;
+<<<<<<< Updated upstream
+=======
+        margin: auto;
+    }
+    #login, #registro{
+        background-color: #f8f9fa;
+        padding: 5% 10%;
+        display: grid;
+        justify-content: center;
+        border-radius: 8px;
+        margin: 5%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        /* change state in small view */
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+>>>>>>> Stashed changes
     }
 }
 
