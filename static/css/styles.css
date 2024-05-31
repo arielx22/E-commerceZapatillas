@@ -38,6 +38,24 @@ h3 {
     font-size: 25px;
 }
 
+.animacion {
+    text-align: center; 
+    animation: fadeInLeftBig 5s infinite;
+    font-size: 10vh; 
+}
+@keyframes fadeInLeftBig {
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    font-size: 5vh; 
+    color: var(--marron);
+}
+}
+
 body {
     background-color: var(--amarillo);
     font-family: 'Nunito', sans-serif;
@@ -95,7 +113,6 @@ body {
     position: relative;
     width: 100vw;
     object-fit: cover;
-    /* padding: 10px 20px; */
 }
 
 .cart-text {
@@ -167,24 +184,6 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
-/* nav ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-nav ul li a {
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--marron);
-    text-decoration: none;
-} */
 
 .navigation {
     list-style: circle;
@@ -369,21 +368,20 @@ border-radius: 16px;
 
 /*footer*/
 footer {
-    text-align: center;
-    background-color: var(--naranja);
     display: flex;
-    justify-content: space-around;
+    background-color: var(--naranja);
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
     height: 150px;
-    padding: 5px 10%;
+    padding: auto;
     width: 100%;
 }
 
 footer a {
     align-items: center;
     padding: 0;
-    margin-left: 4%;
-    margin-right: 4%;
-    list-style: none;
+    margin: auto;
     display: flex;
     font-size: 1rem;
     color: white;
@@ -448,12 +446,23 @@ footer a {
         font-size: 15px;
     }
 
+
     .btn button {
         font-weight: 700;
         padding: 5px 25px;
         font-size: 12px;
         margin: auto;
     }
+    #login, #registro{
+        background-color: #f8f9fa;
+        padding: 5% 10%;
+        display: grid;
+        justify-content: center;
+        border-radius: 8px;
+        margin: 5%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+    }
+
 }
 
 @media only screen and (min-width: 40em) {
