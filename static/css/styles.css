@@ -242,7 +242,7 @@ nav ul li a {
 /*carrusel*/
 .carousel {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 55vw;
     overflow: hidden;
     display: block;
@@ -265,114 +265,117 @@ nav ul li a {
     background-color: var(--amarillo);
 }
 
-/*Secciones*/
+
+/* Secciones */
+
 .article {
-    margin: 0px;
-    width: 100%;
-    background-color: var(--amarillo);
-    text-align: center;
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: space-around;
+padding: 2rem;
+width: 100%; 
 }
 
-.p {
-    text-align: center;
-    line-height: 1.5;
+.enunciado {
+text-align: center;
+line-height: 1.5;
+width: 150%; 
+}
+.seccionMujer,.seccionHombre,.seccionNiños {
+width: 100%;
+flex: 1.5 repeat 0.75; 
+display: flex;
+flex-direction: row; 
+align-items: center;
+box-sizing: border-box;
+justify-content: space-between;
+padding: 2%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
 
 .seccionMujer {
-    background-color: var(--rosa);
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--rosa);
 }
 
 .seccionHombre {
-    background-color: var(--azul);
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--azul);
 }
 
 .seccionNiños {
-    background-color: var(--verde);
-    margin: 20px 5px;
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--verde);
 }
 
 .card {
-    width: 270px;
-    height: 323px;
-    background-color: #dbc5bd;
-    border-radius: 16px;
-    border-style: groove;
-    display: flex;
-    flex-direction: column;
-    margin: 1px;
+height: 25vw;
+width: calc(25% - 20px);
+background-color: #dbc5bd;
+border-radius: 16px;
+border-style: groove;
+display: flex;
+flex-direction: column;
+margin: 0.5%; 
+align-items: center;
 }
 
 .imgcard {
-    height: 200px;
-    width: 237px;
-    flex: 1 1 auto;
-    margin: 1em;
-    overflow: hidden;
-    border-radius: 16px;
+height: 200px;
+width: 237px;
+flex: 1 1 auto;
+margin: 1em;
+padding: 2%;
+overflow: hidden;
+border-radius: 16px;
 }
 
-/*formularos*/
+@media (max-width: 768px) {
+.card {
+    width: 95%;
+    height: auto;
+    
+}
+.imgcard{
+    width: 90%;
+    height: auto;
+    
+}
+.seccionMujer,.seccionHombre,.seccionNiños {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+}
+
+
+/*formularios*/
 .formularios {
     display: grid;
     background-color: var(--amarillo);
-}
-
-/*Login*/
-#login {
-    background-color: #f8f9fa;
-    padding: 80px 150px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    margin: 30px 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+    width: 100vw;
+    margin: 0%;
 }
 
 /*Registro*/
-#registro {
-    margin: 30px 300px;
+#login, #registro{
     background-color: #f8f9fa;
-    padding: 80px 200px;
-    text-align: center;
-    flex-direction: column;
+    padding: 5% 10%;
+    display: grid;
+    justify-content: center;
     border-radius: 8px;
+    margin: 30px 21%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
-
 }
 
 /*footer*/
 footer {
-    display: flex;
     text-align: center;
     background-color: var(--naranja);
     display: flex;
     justify-content: space-around;
     height: 150px;
     padding: 5px 10%;
+    width: 100%;
 }
 
 footer a {
