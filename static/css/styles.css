@@ -62,18 +62,6 @@ body {
     color: var(--negro);
 }
 
-/*  header {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: transparent;
-    border-bottom: none;
-    z-index: 100;
-}  */
-
 /*sobre nosotros*/
 .container {
     max-width: 800px;
@@ -95,15 +83,6 @@ body {
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.293);
 }
 
-/*logo*/
-/*.logo {
-    display: flex;
-    align-items: center;
-    height: 120px;
-    padding: 5px 10%;
-    cursor: default;
-    background-color: #FEDD62;
-}*/
 .logo {
     display: flex;
     align-items: center;
@@ -136,10 +115,8 @@ body {
     object-fit: cover;
 }
 
-.cart-icon {
-    position: absolute;
-    right: 1rem;
-    color: #664731;
+.cart-text {
+    display: none;
 }
 
 .search-container {
@@ -185,33 +162,29 @@ body {
 }
 
 /*barra de navegacion*/
-nav {
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
     background-color: var(--naranja);
+    color: #ffffff;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
     display: flex;
+    background-color: var(--naranja);
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    padding: 5px 10%;
 }
 
-<<<<<<< Updated upstream
-nav ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-nav ul li a {
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--marron);
-    text-decoration: none;
-=======
 .navigation {
     list-style: circle;
     margin: 0 auto;
@@ -250,24 +223,25 @@ nav ul li a {
 
 #menu.show::before {
     content: "X";
->>>>>>> Stashed changes
 }
 
 .btn button {
     font-weight: 700;
     color: var(--marron);
-    padding: 5px 25px;
+    padding: 3px 10px;
+    margin-left: 3rem;
     background: rgb(249, 245, 6);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    white-space: nowrap;
 }
 
 /*carrusel*/
 .carousel {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 55vw;
     overflow: hidden;
     display: block;
@@ -290,123 +264,118 @@ nav ul li a {
     background-color: var(--amarillo);
 }
 
-/*Secciones*/
+
+/* Secciones */
+
 .article {
-    margin: 0px;
-    width: 100%;
-    background-color: var(--amarillo);
-    text-align: center;
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: space-around;
+padding: 2rem;
+width: 100%; 
 }
 
-.p {
-    text-align: center;
-    line-height: 1.5;
+.enunciado {
+text-align: center;
+line-height: 1.5;
+width: 150%; 
+}
+.seccionMujer,.seccionHombre,.seccionNiños {
+width: 100%;
+flex: 1.5 repeat 0.75; 
+display: flex;
+flex-direction: row; 
+align-items: center;
+box-sizing: border-box;
+justify-content: space-between;
+padding: 2%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
 }
 
 .seccionMujer {
-    background-color: var(--rosa);
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--rosa);
 }
 
 .seccionHombre {
-    background-color: var(--azul);
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin: 20px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--azul);
 }
 
 .seccionNiños {
-    background-color: var(--verde);
-    margin: 20px 5px;
-    padding: 3em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+background-color: var(--verde);
 }
 
 .card {
-    width: 270px;
-    height: 323px;
-    background-color: #dbc5bd;
-    border-radius: 16px;
-    border-style: groove;
-    display: flex;
-    flex-direction: column;
-    margin: 1px;
+height: 25vw;
+width: calc(25% - 20px);
+background-color: #dbc5bd;
+border-radius: 16px;
+border-style: groove;
+display: flex;
+flex-direction: column;
+margin: 0.5%; 
+align-items: center;
 }
 
 .imgcard {
-    height: 200px;
-    width: 237px;
-    flex: 1 1 auto;
-    margin: 1em;
-    overflow: hidden;
-    border-radius: 16px;
+height: 200px;
+width: 237px;
+flex: 1 1 auto;
+margin: 1em;
+padding: 2%;
+overflow: hidden;
+border-radius: 16px;
 }
 
-/*formularos*/
+@media (max-width: 768px) {
+.card {
+    width: 95%;
+    height: auto;
+    
+}
+.imgcard{
+    width: 90%;
+    height: auto;
+    
+}
+.seccionMujer,.seccionHombre,.seccionNiños {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+}
+
+
+/*formularios*/
 .formularios {
     display: grid;
     background-color: var(--amarillo);
-}
-
-/*Login*/
-#login {
-    background-color: #f8f9fa;
-    padding: 80px 150px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    margin: 30px 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
+    width: 100vw;
+    margin: 0%;
 }
 
 /*Registro*/
-#registro {
-    margin: 30px 300px;
+#login, #registro{
     background-color: #f8f9fa;
-    padding: 80px 200px;
-    text-align: center;
-    flex-direction: column;
+    padding: 5% 10%;
+    display: grid;
+    justify-content: center;
     border-radius: 8px;
+    margin: 30px 21%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
-
 }
 
 /*footer*/
 footer {
-<<<<<<< Updated upstream
     display: flex;
-    text-align: center;
-=======
->>>>>>> Stashed changes
     background-color: var(--naranja);
     display: inline-flex;
     flex-direction: row;
     align-items: baseline;
     height: 150px;
-<<<<<<< Updated upstream
-    padding: 5px 10%;
-=======
     padding: auto;
     width: 100%;
->>>>>>> Stashed changes
 }
 
 footer a {
@@ -432,21 +401,34 @@ footer a {
 .textoValidacion {
     margin-top: 10px;
     color: var(--naranja);
-
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 500px) {
     h1 {
         font-size: 25px;
     }
 
-    footer a {
-        font-size: 15px;
+    .social span {
+        display: none;
     }
 
     nav ul li a {
         font-weight: 800;
         font-size: 18px;
+    }
+
+    .container {
+        max-width: 80%;
+        color: var(--negro);
+    }
+
+    .cart-icon {
+        right: 1rem;
+        color: #664731;
+    }
+
+    .cart-text {
+        display: inline;
     }
 }
 
@@ -469,8 +451,6 @@ footer a {
         font-weight: 700;
         padding: 5px 25px;
         font-size: 12px;
-<<<<<<< Updated upstream
-=======
         margin: auto;
     }
     #login, #registro{
@@ -482,6 +462,7 @@ footer a {
         margin: 5%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.293);
     }
+
 }
 
 @media only screen and (min-width: 40em) {
@@ -501,7 +482,6 @@ footer a {
 
     #menu {
         display: none;
->>>>>>> Stashed changes
     }
 }
 
