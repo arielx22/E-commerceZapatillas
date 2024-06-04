@@ -51,7 +51,7 @@ h3 {
     to {
     opacity: 1;
     transform: translateX(0);
-    font-size: 5vh; 
+    font-size: 10vh; 
     color: var(--marron);
 }
 }
@@ -314,17 +314,17 @@ border-style: groove;
 display: flex;
 flex-direction: column;
 margin: 0.5%; 
-align-items: center;
+align-content: stretch;
+justify-content: stretch;
 }
 
 .imgcard {
-height: 200px;
-width: 237px;
+height: auto;
+width: auto;
 flex: 1 1 auto;
-margin: 1em;
-padding: 2%;
+margin: 0.25em;
 overflow: hidden;
-border-radius: 16px;
+border-radius: 12px;
 }
 
 @media (max-width: 768px) {
